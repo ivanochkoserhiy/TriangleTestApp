@@ -87,7 +87,7 @@ namespace TestTriangle
 
             try
             {
-                items = parseInputArray("../../Input.txt");
+                items = parseInputArray("Input.txt");
 
                 //Start algorithm
                 if (items != null)
