@@ -83,11 +83,21 @@ namespace TestTriangle
             while (countRows == 0);
 
             //Parse input file
-            List<int[]> items;
-
+            List<int[]> items = null;
+            string fileName = "Input.txt";
             try
             {
-                items = parseInputArray("Input.txt");
+                while (items == null)
+                {
+                    try
+                    {
+                        items = parseInputArray(fileName);
+                    }
+                    catch {
+                        fileName = "../"+fileName;
+                    }
+
+                }
 
                 //Start algorithm
                 if (items != null)
